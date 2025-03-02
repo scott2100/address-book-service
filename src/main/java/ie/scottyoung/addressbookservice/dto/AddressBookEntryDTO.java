@@ -14,9 +14,15 @@ public class AddressBookEntryDTO {
     private int phoneNumber;
     private String countryCode;
     private String emailAddress;
-
     private Long addressBookId;
 
+    public Long getAddressBookId() {
+        return addressBookId;
+    }
+
+    public void setAddressBookId(Long addressBookId) {
+        this.addressBookId = addressBookId;
+    }
     public Long getId() {
         return id;
     }

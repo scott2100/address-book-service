@@ -17,8 +17,6 @@ public class AddressBookService {
 
     @Autowired
     private AddressBookRepository repository;
-    @Autowired
-    private AddressBookEntryService addressBookEntryService;
 
     @Transactional
     public AddressBook createAddressBook(AddressBook addressBook){

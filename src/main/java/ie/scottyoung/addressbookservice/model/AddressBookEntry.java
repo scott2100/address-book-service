@@ -136,4 +136,7 @@ public class AddressBookEntry {
     public void setAddressBook(AddressBook addressBook) {
         this.addressBook = addressBook;
     }
+    public Long getAddressBookId() {
+        return addressBook.getId();
+    }
 }
