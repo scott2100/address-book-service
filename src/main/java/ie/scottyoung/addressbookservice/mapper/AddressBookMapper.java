@@ -1,9 +1,7 @@
 package ie.scottyoung.addressbookservice.mapper;
 
-import ie.scottyoung.addressbookservice.dto.AddressBookEntryDTO;
 import ie.scottyoung.addressbookservice.dto.AddressBookDTO;
 import ie.scottyoung.addressbookservice.model.AddressBook;
-import ie.scottyoung.addressbookservice.mapper.AddressBookEntryMapper;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;

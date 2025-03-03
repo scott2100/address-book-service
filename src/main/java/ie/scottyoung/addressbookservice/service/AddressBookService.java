@@ -1,6 +1,5 @@
 package ie.scottyoung.addressbookservice.service;
 
-import ie.scottyoung.addressbookservice.dto.AddressBookDTO;
 import ie.scottyoung.addressbookservice.model.AddressBook;
 import ie.scottyoung.addressbookservice.model.AddressBookEntry;
 import ie.scottyoung.addressbookservice.repository.AddressBookEntryRepository;
@@ -16,7 +15,9 @@ import java.util.Optional;
 public class AddressBookService {
 
     @Autowired
-    private AddressBookRepository repository;
+    private AddressBookRepository addressBookRepository;
+    @Autowired
+    private AddressBookEntryRepository addressBookEntryRepository;
 
     @Transactional
     public AddressBook createAddressBook(AddressBook addressBook){
@@ -25,12 +26,12 @@ public class AddressBookService {
                 entry.setAddressBook(addressBook); // Set the addressBook field
             }
         }
-        return repository.save(addressBook);
+        return addressBookRepository.save(addressBook);
     }
     public List<AddressBook> getAddressBooks(){
-        return repository.findAll();
+        return addressBookRepository.findAll();
     }
     public Optional<AddressBook> getAddressBookById(Long id){
-        return repository.findById(id);
+        return addressBookRepository.findById(id);
     }
 }
